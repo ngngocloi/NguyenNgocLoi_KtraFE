@@ -1,6 +1,4 @@
-﻿
-/* 1. Thiết lập chung */
-* {
+﻿* {
     box-sizing: border-box;
 }
 
@@ -14,7 +12,7 @@ body {
     background: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.45;
 }
 
 button, input, select {
@@ -49,10 +47,9 @@ h1, h2, h3, p {
     margin: 0;
 }
 
-/* Một cột cho trang chính, một cột nhỏ cho giỏ hàng bên phải. */
 .page-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 110px;
+    grid-template-columns: minmax(0, 1fr) 136px;
     min-height: 100vh;
 }
 
@@ -83,12 +80,11 @@ h1, h2, h3, p {
         top: 10px;
     }
 
-/* 2. Header: logo, địa chỉ, tìm kiếm, tài khoản và giỏ hàng */
 .header-main {
     display: flex;
     align-items: center;
-    gap: 12px;
-    min-height: 62px;
+    gap: 10px;
+    min-height: 70px;
     padding: 7px 16px;
     color: #fff;
     background: #131921;
@@ -99,7 +95,7 @@ h1, h2, h3, p {
     align-items: center;
     gap: 6px;
     flex-shrink: 0;
-    min-height: 46px;
+    min-height: 50px;
     padding: 3px 6px;
     border: 1px solid transparent;
     color: #fff;
@@ -116,7 +112,7 @@ h1, h2, h3, p {
     display: inline-block;
     padding: 0 1px 8px;
     color: #fff;
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: -1.8px;
     line-height: 1;
@@ -148,13 +144,13 @@ h1, h2, h3, p {
 
 .header-link small {
     display: block;
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.3;
 }
 
 .header-link strong {
     display: block;
-    font-size: 13px;
+    font-size: 14px;
     white-space: nowrap;
 }
 
@@ -172,7 +168,7 @@ h1, h2, h3, p {
     display: flex;
     flex: 1;
     min-width: 100px;
-    height: 40px;
+    height: 46px;
     overflow: hidden;
     border-radius: 5px;
 }
@@ -182,13 +178,13 @@ h1, h2, h3, p {
     }
 
     .search-bar select {
-        width: 52px;
+        width: 60px;
         padding-left: 8px;
         border: 0;
         border-right: 1px solid #ccc;
         color: #555;
         background: #e6e6e6;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .search-bar input {
@@ -197,16 +193,16 @@ h1, h2, h3, p {
         padding: 0 12px;
         border: 0;
         outline: 0;
-        font-size: 15px;
+        font-size: 16px;
     }
 
 .search-button {
-    width: 47px;
+    width: 52px;
     flex-shrink: 0;
     border: 0;
     color: #131921;
     background: #febd69;
-    font-size: 19px;
+    font-size: 22px;
 }
 
     .search-button:hover {
@@ -231,7 +227,7 @@ h1, h2, h3, p {
 .tiny-arrow {
     margin-left: 2px;
     color: #aaa;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .cart-link {
@@ -240,7 +236,7 @@ h1, h2, h3, p {
 }
 
     .cart-link > i {
-        font-size: 30px;
+        font-size: 34px;
     }
 
 .cart-count {
@@ -248,16 +244,15 @@ h1, h2, h3, p {
     top: -2px;
     left: 20px;
     color: #f08804;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 700;
 }
 
-/* Thanh menu thứ hai */
 .header-nav {
     display: flex;
     align-items: center;
     gap: 2px;
-    min-height: 36px;
+    min-height: 42px;
     padding: 0 15px;
     overflow-x: auto;
     background: #232f3e;
@@ -265,10 +260,10 @@ h1, h2, h3, p {
 }
 
     .header-nav a {
-        padding: 7px 8px;
+        padding: 9px 8px;
         border: 1px solid transparent;
         color: #fff;
-        font-size: 12px;
+        font-size: 14px;
     }
 
         .header-nav a:hover {
@@ -286,17 +281,16 @@ h1, h2, h3, p {
     color: #febd69;
 }
 
-/* 3. Thông tin kết quả và bộ lọc bên trái */
 .result-toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    min-height: 43px;
-    padding: 8px 20px;
+    min-height: 52px;
+    padding: 10px 24px;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 2px 4px #00000008;
-    font-size: 12px;
+    font-size: 14px;
 }
 
     .result-toolbar b {
@@ -304,32 +298,32 @@ h1, h2, h3, p {
     }
 
 .sort-select {
-    max-width: 190px;
-    padding: 4px 7px;
+    max-width: 220px;
+    padding: 6px 9px;
     border: 1px solid #d5d9d9;
     border-radius: 8px;
     background: #f0f2f2;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .catalog-layout {
     display: grid;
-    grid-template-columns: 180px minmax(0, 1fr);
-    gap: 20px;
-    padding: 20px 20px 0;
+    grid-template-columns: 208px minmax(0, 1fr);
+    gap: 24px;
+    padding: 24px 24px 0;
 }
 
 .filters {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .filter-group {
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
 
     .filter-group h2 {
-        margin-bottom: 7px;
-        font-size: 13px;
+        margin-bottom: 8px;
+        font-size: 16px;
     }
 
     .filter-group ul {
@@ -339,7 +333,7 @@ h1, h2, h3, p {
     }
 
     .filter-group li {
-        margin-bottom: 4px;
+        margin-bottom: 5px;
     }
 
         .filter-group li a {
@@ -356,7 +350,7 @@ h1, h2, h3, p {
 
 .stars {
     color: #de7926;
-    font-size: 13px;
+    font-size: 16px;
     white-space: nowrap;
 }
 
@@ -368,16 +362,18 @@ h1, h2, h3, p {
 }
 
     .price-range input {
-        width: 132px;
+        width: 160px;
         accent-color: #007185;
+        min-width: 0;
+        flex: 1;
     }
 
 .small-button {
-    padding: 3px 8px;
+    padding: 5px 10px;
     border: 1px solid #d5d9d9;
     border-radius: 8px;
     background: #fff;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .filter-group label {
@@ -392,22 +388,25 @@ h1, h2, h3, p {
     accent-color: #007185;
 }
 
-/* 4. Năm sản phẩm chính. Grid giúp chia các cột đều nhau. */
-.results h1 {
-    font-size: 20px;
-    line-height: 1.25;
+.results {
+    min-width: 0;
 }
 
+    .results h1 {
+        font-size: 26px;
+        line-height: 1.25;
+    }
+
 .result-help {
-    margin: 3px 0 13px;
+    margin: 5px 0 16px;
     color: #565959;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 12px;
+    gap: 16px;
 }
 
 .product-card {
@@ -418,8 +417,8 @@ h1, h2, h3, p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 210px;
-    margin-bottom: 8px;
+    height: 250px;
+    margin-bottom: 10px;
     padding: 8px;
     background: #f8f8f8;
 }
@@ -434,16 +433,16 @@ h1, h2, h3, p {
 .sponsored {
     margin-bottom: 4px;
     color: #565959;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .product-title {
     display: -webkit-box;
-    min-height: 76px;
+    min-height: 96px;
     overflow: hidden;
     color: #0f1111;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
@@ -451,41 +450,42 @@ h1, h2, h3, p {
 .rating {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
     margin: 5px 0 3px;
-    font-size: 11px;
+    font-size: 14px;
+    flex-wrap: wrap;
 }
 
 .bought {
     color: #565959;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .price {
     display: flex;
     align-items: flex-start;
-    margin: 5px 0 2px;
+    margin: 8px 0 4px;
     line-height: 1;
 }
 
     .price .currency, .price .cents {
         padding-top: 3px;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .price .whole {
-        font-size: 27px;
+        font-size: 34px;
     }
 
 .list-price {
     margin-bottom: 5px;
     color: #565959;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .coupon {
-    margin: 5px 0;
-    font-size: 10px;
+    margin: 7px 0;
+    font-size: 13px;
 }
 
     .coupon span {
@@ -494,23 +494,23 @@ h1, h2, h3, p {
     }
 
 .delivery-info {
-    margin: 5px 0 2px;
-    font-size: 11px;
+    margin: 7px 0 3px;
+    font-size: 14px;
 }
 
 .ships {
     color: #565959;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .add-button {
-    margin-top: 9px;
-    padding: 6px 12px;
+    margin-top: 12px;
+    padding: 8px 16px;
     border: 1px solid #fcd200;
     border-radius: 20px;
     color: #0f1111;
     background: #ffd814;
-    font-size: 11px;
+    font-size: 14px;
 }
 
     .add-button:hover {
@@ -520,17 +520,16 @@ h1, h2, h3, p {
 .sustainability {
     margin-top: 5px;
     color: #565959;
-    font-size: 10px;
+    font-size: 13px;
 }
 
     .sustainability i {
         color: #168342;
     }
 
-/* 5. Hai hàng gợi ý, mỗi hàng tám sản phẩm */
 .recommendations {
-    margin: 22px 20px 0;
-    padding: 18px 0 20px;
+    margin: 26px 24px 0;
+    padding: 22px 0 24px;
     border-top: 1px solid #ddd;
 }
 
@@ -543,33 +542,33 @@ h1, h2, h3, p {
 }
 
     .section-heading h2 {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .section-heading span {
         flex-shrink: 0;
         color: #565959;
-        font-size: 10px;
+        font-size: 13px;
     }
 
 .recommendation-list {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
-    gap: 18px;
-    padding: 0 20px;
+    gap: 16px;
+    padding: 0 12px;
 }
 
 .recommendation-card {
     min-width: 0;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .recommendation-image {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 150px;
-    margin-bottom: 8px;
+    height: 180px;
+    margin-bottom: 10px;
 }
 
     .recommendation-image img {
@@ -580,44 +579,45 @@ h1, h2, h3, p {
 
 .recommendation-title {
     display: -webkit-box;
-    min-height: 45px;
+    min-height: 63px;
     overflow: hidden;
-    line-height: 15px;
+    line-height: 21px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
 .recommendation-card .rating {
-    gap: 3px;
+    gap: 4px;
     margin: 3px 0;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .recommendation-card .stars {
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .recommendation-price {
     color: #b12704;
-    font-size: 16px;
+    font-size: 18px;
 }
 
     .recommendation-price sup {
-        font-size: 9px;
+        font-size: 12px;
     }
 
 .recommendation-card p {
     margin-top: 2px;
-    font-size: 10px;
+    font-size: 13px;
+    line-height: 1.5;
 }
 
 .recommendation-card .choice-label {
     display: inline-block;
     margin-top: 4px;
-    padding: 2px 4px;
+    padding: 3px 5px;
     color: #fff;
     background: #232f3e;
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .choice-label b {
@@ -625,7 +625,6 @@ h1, h2, h3, p {
     font-weight: 400;
 }
 
-/* 6. Giỏ hàng mini chạy dọc bên phải */
 .cart-sidebar {
     grid-column: 2;
     grid-row: 1 / span 2;
@@ -636,35 +635,35 @@ h1, h2, h3, p {
 .cart-inner {
     position: sticky;
     top: 0;
-    padding: 10px 8px;
+    padding: 14px 10px;
     text-align: center;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .subtotal {
     display: block;
     margin: 1px 0 5px;
     color: #b12704;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .go-cart {
     display: block;
-    padding: 3px 0;
+    padding: 5px 0;
     border: 1px solid #d5d9d9;
     border-radius: 9px;
     color: #0f1111;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .cart-item {
-    padding: 16px 0;
+    padding: 14px 0;
     border-bottom: 1px solid #eee;
 }
 
     .cart-item img {
-        width: 76px;
-        height: 86px;
+        width: 96px;
+        height: 106px;
         margin: 0 auto 6px;
         object-fit: contain;
     }
@@ -672,25 +671,25 @@ h1, h2, h3, p {
     .cart-item strong {
         display: block;
         margin-bottom: 7px;
-        font-size: 11px;
+        font-size: 14px;
     }
 
 .quantity-control {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 25px;
+    height: 34px;
     overflow: hidden;
     border: 1px solid #eac900;
     border-radius: 20px;
 }
 
     .quantity-control button {
-        width: 26px;
+        width: 34px;
         height: 100%;
         border: 0;
         background: #fff;
-        font-size: 10px;
+        font-size: 13px;
     }
 
         .quantity-control button:hover {
@@ -700,36 +699,37 @@ h1, h2, h3, p {
 .deal-label {
     display: inline-block;
     margin-bottom: 4px;
-    padding: 2px 3px;
+    padding: 3px 4px;
     color: #fff;
     background: #cc0c39;
-    font-size: 9px;
+    font-size: 12px;
 }
 
-/* 7. Footer gồm 7 cột, giống phần cuối trong ảnh đề bài */
 .site-footer {
     grid-column: 1;
     margin-top: 15px;
-    padding: 32px max(25px, 8%) 22px;
+    padding: 36px 40px 26px;
     background: #131a22;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 25px 26px;
+    gap: 28px 22px;
 }
 
     .footer-grid a {
         display: block;
         color: #ddd;
-        line-height: 1.25;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
     }
 
         .footer-grid a span {
             display: block;
-            color: #999;
+            color: #b7bcc4;
+            font-size: 13px;
         }
 
         .footer-grid a:hover {
@@ -740,7 +740,7 @@ h1, h2, h3, p {
     margin-top: 30px;
     color: #ddd;
     text-align: center;
-    font-size: 10px;
+    font-size: 13px;
 }
 
     .footer-bottom a {
@@ -754,22 +754,308 @@ h1, h2, h3, p {
     margin-top: 12px;
 }
 
-/* 8. Điều chỉnh cho màn hình nhỏ. Trên máy tính vẫn giữ 5 cột theo đề. */
+[hidden] {
+    display: none !important;
+}
+
+.mobile-filter-toggle {
+    display: none;
+}
+
+.result-toolbar p {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.filters a.is-active {
+    color: #0f1111;
+    background: #fff3b3;
+    font-weight: 700;
+}
+
+.header-nav a.is-active {
+    color: #ffd814;
+}
+
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.filter-chip, .secondary-button {
+    padding: 7px 12px;
+    border: 1px solid #b7baba;
+    border-radius: 8px;
+    color: #0f1111;
+    background: #fff;
+    font-size: 14px;
+}
+
+.filter-chip {
+    background: #f3f5f5;
+}
+
+.clear-filters, .remove-cart-item {
+    border: 0;
+    color: #007185;
+    background: transparent;
+    font-size: 14px;
+}
+
+    .clear-filters:hover, .remove-cart-item:hover {
+        text-decoration: underline;
+    }
+
+.empty-results {
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f8f8f8;
+}
+
+    .empty-results h2 {
+        margin-bottom: 8px;
+        font-size: 21px;
+    }
+
+    .empty-results .add-button {
+        margin-top: 16px;
+    }
+
+.cart-inner {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.cart-items {
+    display: contents;
+}
+
+.go-cart {
+    width: 100%;
+    background: #fff;
+}
+
+.cart-product-preview {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.empty-cart {
+    grid-column: 1 / -1;
+    margin: 16px 0;
+    color: #565959;
+}
+
+button:disabled {
+    cursor: default;
+    opacity: .5;
+}
+
+.modal {
+    width: min(840px, calc(100% - 32px));
+    max-height: calc(100vh - 40px);
+    margin: auto;
+    padding: 0;
+    overflow: auto;
+    border: 1px solid #d5d9d9;
+    border-radius: 12px;
+    color: #0f1111;
+    background: #fff;
+    box-shadow: 0 12px 48px #0004;
+}
+
+    .modal::backdrop {
+        background: #0008;
+    }
+
+.modal-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+    .modal-heading h2 {
+        font-size: 22px;
+    }
+
+.dialog-close {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1;
+}
+
+    .dialog-close:hover {
+        background: #eee;
+    }
+
+.modal-body {
+    padding: 24px;
+}
+
+.product-detail-layout {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 24px;
+}
+
+.detail-image {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    background: #f8f8f8;
+}
+
+.product-detail-content h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.detail-rating {
+    margin-bottom: 12px;
+    color: #a54c00;
+}
+
+.detail-price {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.detail-quantity {
+    display: block;
+    margin: 16px 0;
+}
+
+.quantity-input {
+    width: 64px;
+    padding: 6px;
+    border: 1px solid #888c8c;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 16px;
+}
+
+.original-product-link {
+    display: block;
+    margin-top: 16px;
+}
+
+.product-detail-content .modal-feedback, .cart-dialog-summary .modal-feedback {
+    margin-top: 12px;
+    color: #067d62;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cart-dialog-item {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+    .cart-dialog-item > img {
+        width: 88px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+.cart-dialog-description h3 {
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.cart-dialog-description > p {
+    color: #565959;
+    font-size: 14px;
+}
+
+.cart-row-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.cart-line-total {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.cart-dialog-summary {
+    margin-top: 24px;
+    text-align: right;
+}
+
+    .cart-dialog-summary > strong {
+        font-size: 20px;
+    }
+
+    .cart-dialog-summary > p {
+        margin: 8px 0 16px;
+        color: #565959;
+        font-size: 14px;
+    }
+
+.cart-dialog-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.toast {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: min(420px, calc(100% - 32px));
+    padding: 14px 18px;
+    border-radius: 8px;
+    color: #fff;
+    background: #131921;
+    box-shadow: 0 4px 20px #0003;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    pointer-events: none;
+}
+
+
 @media (min-width: 1600px) {
     .product-image {
-        height: 270px;
+        height: 290px;
     }
 
     .recommendation-image {
-        height: 180px;
+        height: 200px;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1279px) {
     .header-main {
-        gap: 5px;
-        padding-right: 8px;
-        padding-left: 8px;
+        gap: 6px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
     .delivery {
@@ -777,29 +1063,27 @@ h1, h2, h3, p {
     }
 
     .catalog-layout {
-        grid-template-columns: 150px minmax(0, 1fr);
-        gap: 15px;
-        padding-right: 15px;
-        padding-left: 15px;
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
-    .product-image {
-        height: 180px;
+    .product-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px 16px;
     }
 
     .recommendation-list {
-        gap: 12px;
-        padding: 0;
-    }
-
-    .recommendation-image {
-        height: 115px;
+        grid-template-columns: repeat(8, 164px);
+        overflow-x: auto;
+        padding: 0 0 12px;
     }
 }
 
 @media (max-width: 1000px) {
     .page-layout {
-        grid-template-columns: minmax(0, 1fr) 95px;
+        grid-template-columns: minmax(0, 1fr) 118px;
     }
 
     .language-link, .orders-link {
@@ -807,22 +1091,23 @@ h1, h2, h3, p {
     }
 
     .catalog-layout {
-        grid-template-columns: 130px minmax(0, 1fr);
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 16px;
+        padding-right: 16px;
+        padding-left: 16px;
     }
 
     .product-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 20px 12px;
     }
 
-    .recommendation-list {
-        grid-template-columns: repeat(8, 132px);
-        overflow-x: auto;
-        padding-bottom: 10px;
+    .product-image {
+        height: 210px;
     }
 
-    .recommendation-image {
-        height: 140px;
+    .recommendations {
+        margin-right: 16px;
+        margin-left: 16px;
     }
 
     .footer-grid {
@@ -830,7 +1115,7 @@ h1, h2, h3, p {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
     .page-layout {
         display: block;
     }
@@ -850,10 +1135,6 @@ h1, h2, h3, p {
         margin-left: auto;
     }
 
-        .account-link strong {
-            font-size: 12px;
-        }
-
     .cart-link strong {
         display: none;
     }
@@ -864,76 +1145,173 @@ h1, h2, h3, p {
 
     .result-toolbar {
         align-items: flex-start;
-        padding: 10px 12px;
+        flex-wrap: wrap;
+        padding: 12px 16px;
     }
 
     .sort-select {
-        width: 133px;
-        flex-shrink: 0;
+        width: 180px;
     }
 
     .catalog-layout {
         display: block;
-        padding: 15px 12px 0;
+        padding: 20px 16px 0;
     }
 
     .filters {
         display: none;
     }
 
+        .filters.is-open {
+            display: block;
+            margin-bottom: 24px;
+            padding: 18px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f8f8f8;
+        }
+
+    .mobile-filter-toggle {
+        display: inline-block;
+    }
+
+    .modal {
+        width: calc(100% - 24px);
+        max-height: calc(100dvh - 24px);
+    }
+
+    .modal-heading {
+        padding: 12px 16px;
+    }
+
+        .modal-heading h2 {
+            font-size: 20px;
+        }
+
+    .modal-body {
+        padding: 16px;
+    }
+
+    .product-detail-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .detail-image {
+        height: 220px;
+    }
+
+    .cart-dialog-item {
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+        .cart-dialog-item > img {
+            width: 64px;
+            height: 80px;
+        }
+
+    .cart-line-total {
+        grid-column: 2;
+    }
+
     .product-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 16px;
     }
 
     .product-image {
-        height: 175px;
+        height: 195px;
     }
 
     .recommendations {
-        margin-right: 12px;
-        margin-left: 12px;
+        margin-right: 16px;
+        margin-left: 16px;
     }
 
-    .section-heading h2 {
-        font-size: 15px;
+    .section-heading {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 6px;
     }
+
+        .section-heading h2 {
+            font-size: 19px;
+        }
 
     .cart-sidebar {
-        margin: 10px 12px 20px;
+        margin: 12px 16px 24px;
         border: 1px solid #ddd;
         border-radius: 8px;
     }
 
     .cart-inner {
         position: static;
+        max-height: none;
+        overflow: visible;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 8px;
-        padding: 12px;
+        gap: 10px;
+        padding: 14px;
     }
 
     .cart-summary {
         grid-column: 1 / -1;
-        padding-bottom: 7px;
+        padding-bottom: 10px;
         border-bottom: 1px solid #ddd;
     }
 
     .go-cart {
-        width: 100px;
+        width: 120px;
         margin: 5px auto 0;
     }
 
     .cart-item {
+        min-width: 0;
         border-bottom: 0;
     }
 
+        .cart-item img {
+            width: 100%;
+            height: 96px;
+        }
+
+    .quantity-control button {
+        width: 28px;
+    }
+
     .site-footer {
-        padding: 25px 18px;
+        padding: 30px 18px;
     }
 
     .footer-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px 14px;
+        gap: 24px 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .amazon-logo {
+        font-size: 28px;
+    }
+
+    .header-link {
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+
+    .catalog-layout {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .product-grid {
+        gap: 24px 12px;
+    }
+
+    .cart-inner {
+        gap: 6px;
+        padding: 10px;
     }
 }
 
