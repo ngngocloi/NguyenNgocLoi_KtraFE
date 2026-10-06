@@ -1,0 +1,575 @@
+﻿@{
+    ViewBag.Title = "NguyenNgocLoi_KtraFE";
+}
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amazon product listing.">
+    <title>Amazon Product List</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="~/assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="~/Content/Style.css">
+</head>
+<body id="top">
+    <a class="skip-link" href="#results">Skip to products</a>
+
+    <div class="page-layout">
+        <div class="site-main">
+            <!-- Giao Dien  -->
+            <header>
+                <div class="header-main">
+                    <a class="header-link" href="index.html" aria-label="Amazon home">
+                        <span class="amazon-logo">amazon</span>
+                    </a>
+
+                    <a class="header-link delivery" href="#results">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <span><small>Deliver to Loi</small><strong>Ho Chi Minh 700000</strong></span>
+                    </a>
+
+                    <form class="search-bar" action="https://www.amazon.com/s" method="get" role="search">
+                        <label class="sr-only" for="search-category">Search category</label>
+                        <select id="search-category" name="i">
+                            <option value="aps">All</option>
+                            <option value="garden">Home</option>
+                            <option value="fashion">Fashion</option>
+                        </select>
+                        <label class="sr-only" for="search-input">Search Amazon</label>
+                        <input id="search-input" type="search" name="k" value="cleaning tools" placeholder="Search Amazon">
+                        <button class="search-button" type="submit" aria-label="Search Amazon">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+
+                    <a class="header-link language-link" href="https://www.amazon.com/customer-preferences/edit?ref_=icp_lop_mop">
+                        <span class="flag-us" aria-hidden="true"></span>
+                        <strong>EN <i class="fas fa-caret-down tiny-arrow" aria-hidden="true"></i></strong>
+                    </a>
+                    <a class="header-link account-link" href="https://www.amazon.com/ap/signin">
+                        <span><small>Hello, sign in</small><strong>Account &amp; Lists <i class="fas fa-caret-down tiny-arrow" aria-hidden="true"></i></strong></span>
+                    </a>
+                    <a class="header-link orders-link" href="https://www.amazon.com/gp/your-account/order-history">
+                        <span><small>Returns</small><strong>&amp; Orders</strong></span>
+                    </a>
+                    <a class="header-link cart-link" href="#cart" aria-label="Cart, 4 items">
+                        <span class="cart-count">4</span>
+                        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                        <strong>Cart</strong>
+                    </a>
+                </div>
+
+                <nav class="header-nav" aria-label="Main navigation">
+                    <a class="all-menu" href="#filters"><i class="fas fa-bars" aria-hidden="true"></i> All</a>
+                    <a class="rufus-link" href="#results"><i class="fas fa-comment-dots" aria-hidden="true"></i> Rufus</a>
+                    <a href="https://www.amazon.com/gp/goldbox">Today's Deals</a>
+                    <a href="https://www.amazon.com/gp/video/storefront">Prime Video</a>
+                    <a href="https://www.amazon.com/gp/buyagain">Buy Again</a>
+                    <a href="https://www.amazon.com/gp/help/customer/display.html">Customer Service</a>
+                    <a href="https://www.amazon.com/registries">Registry</a>
+                    <a href="https://www.amazon.com/gift-cards">Gift Cards</a>
+                    <a href="https://sell.amazon.com/">Sell</a>
+                </nav>
+            </header>
+
+            <main>
+                <div class="result-toolbar">
+                    <p>1-48 of over 40,000 results for <b>"cleaning tools"</b></p>
+                    <label class="sr-only" for="sort">Sort products</label>
+
+                    <select class="sort-select" id="sort">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Avg. Customer Review</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+
+                <div class="catalog-layout">
+                    <aside class="filters" id="filters" aria-label="Product filters">
+                        <section class="filter-group">
+                            <h2>Popular Shopping Ideas</h2>
+                            <ul>
+                                <li><a href="https://www.amazon.com/s?k=window+cleaning+tools">Window</a></li>
+                                <li><a href="https://www.amazon.com/s?k=bathroom+cleaning+tools">Bathroom</a></li>
+                                <li><a href="https://www.amazon.com/s?k=household+cleaning+tools">Household</a></li>
+                                <li><a href="https://www.amazon.com/s?k=tile+cleaning+tools">Tile</a></li>
+                                <li><a href="https://www.amazon.com/s?k=cleaning+tools">See more <i class="fas fa-chevron-down tiny-arrow" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </section>
+
+                        <section class="filter-group">
+                            <h2>Customer Reviews</h2>
+                            <a href="#results" aria-label="4 stars and up"><span class="stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span> &amp; Up</a>
+                        </section>
+
+                        <section class="filter-group">
+                            <h2>Deals &amp; Discounts</h2>
+                            <ul>
+                                <li><a href="#results">All Discounts</a></li>
+                                <li><a href="https://www.amazon.com/gp/goldbox">Today's Deals</a></li>
+                            </ul>
+                        </section>
+
+                        <section class="filter-group">
+                            <h2>Price</h2>
+                            <p>$0 – $3,700+</p>
+                            <div class="price-range">
+                                <label class="sr-only" for="max-price">Maximum price</label>
+                                <input id="max-price" type="range" min="0" max="3700" value="3700">
+                                <button class="small-button" type="button">Go</button>
+                            </div>
+                            <ul>
+                                <li><a href="#results">Up to $10</a></li>
+                                <li><a href="#results">$10 to $15</a></li>
+                                <li><a href="#results">$15 to $20</a></li>
+                                <li><a href="#results">$20 to $25</a></li>
+                                <li><a href="#results">$25 &amp; above</a></li>
+                            </ul>
+                        </section>
+
+                        <section class="filter-group">
+                            <h2>Department</h2>
+                            <ul>
+                                <li><a href="#results">Household Cleaning Tools</a></li>
+                                <li class="indent"><a href="#results">Household Cleaning Brushes</a></li>
+                                <li class="indent"><a href="#results">Household Mops, Buckets &amp; Accessories</a></li>
+                            </ul>
+                        </section>
+
+                    </aside>
+                    <section class="results" id="results" aria-labelledby="results-heading">
+                        <h1 id="results-heading">Results</h1>
+                        <p class="result-help">Check each product page for other buying options. Price and other details may vary based on product size and color.</p>
+                        <div class="product-grid">
+
+                            <article class="product-card">
+                                <a class="product-image" href="https://www.amazon.com/dp/B0B7RSV894">
+                                    <img src="~/assets/images/scrubber-01.jpg" alt="Bomves Electric Spin Scrubber">
+                                </a>
+                                <p class="sponsored">Sponsored <i class="fas fa-info-circle" aria-hidden="true"></i></p>
+                                <a class="product-title" href="https://www.amazon.com/dp/B0B7RSV894">Bomves Electric Spin Scrubber, Cordless Cleaning Brush for Home, 8 Replaceable Brush Heads, Adjustable Long Handle</a>
+                                <div class="rating">
+                                    <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                    <a href="https://www.amazon.com/dp/B0B7RSV894">9,862</a>
+                                </div>
+                                <p class="bought">400+ bought in past month</p>
+                                <p class="price" aria-label="39.99 dollars">
+                                    <span class="currency">$</span><span class="whole">39</span><span class="cents">99</span>
+                                </p>
+                                <p class="list-price">List: <del>$49.99</del></p>
+                                <p class="coupon"><span>Save 10%</span> with coupon</p>
+                                <p class="delivery-info">Delivery <strong>Tue, Nov 4</strong></p>
+                                <p class="ships">Ships to Vietnam</p>
+
+                                <button class="add-button" type="button">Add to cart</button>
+                            </article>
+
+                            <article class="product-card">
+                                <a class="product-image" href="https://www.amazon.com/s?k=Casabella+Power+Spin+Scrubber">
+                                    <img src="~/assets/images/scrubber-02.jpg" alt="Casabella Power Spin Scrubber">
+                                </a>
+                                <p class="sponsored">Sponsored <i class="fas fa-info-circle" aria-hidden="true"></i></p>
+                                <a class="product-title" href="https://www.amazon.com/s?k=Casabella+Power+Spin+Scrubber">Casabella Power Spin Scrubber, Extendable to 47.5 inches, Cordless Electric Cleaner for Shower, Kitchen and Bathroom</a>
+                                <div class="rating">
+                                    <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                    <a href="https://www.amazon.com/s?k=Casabella+Power+Spin+Scrubber">1,729</a>
+                                </div>
+                                <p class="bought">200+ bought in past month</p>
+                                <p class="price" aria-label="49.99 dollars">
+                                    <span class="currency">$</span><span class="whole">49</span><span class="cents">99</span>
+                                </p>
+                                <p class="list-price">List: <del>$59.99</del></p>
+                                <p class="delivery-info">Delivery <strong>Tue, Nov 4</strong></p>
+                                <p class="ships">Ships to Vietnam</p>
+
+                                <button class="add-button" type="button">Add to cart</button>
+                            </article>
+                            -->
+                            <article class="product-card">
+                                <a class="product-image" href="https://www.amazon.com/dp/B09P51V2LH">
+                                    <img src="~/assets/images/scrubber-03.jpg" alt="Leebein Electric Spin Scrubber">
+                                </a>
+                                <p class="sponsored">Sponsored <i class="fas fa-info-circle" aria-hidden="true"></i></p>
+                                <a class="product-title" href="https://www.amazon.com/dp/B09P51V2LH">Leebein Electric Spin Scrubber, Cordless Cleaning Brush with 8 Brush Heads, Adjustable Handle for Bathroom and Tile</a>
+                                <div class="rating">
+                                    <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                    <a href="https://www.amazon.com/dp/B09P51V2LH">2,841</a>
+                                </div>
+                                <p class="bought">2K+ bought in past month</p>
+                                <p class="price" aria-label="35.99 dollars">
+                                    <span class="currency">$</span><span class="whole">35</span><span class="cents">99</span>
+                                </p>
+                                <p class="list-price">List: <del>$45.99</del></p>
+                                <p class="coupon"><span>Save 15%</span> with coupon</p>
+                                <p class="delivery-info">Delivery <strong>Tue, Nov 4</strong></p>
+                                <p class="ships">Ships to Vietnam</p>
+
+                                <button class="add-button" type="button">Add to cart</button>
+                            </article>
+
+                            <article class="product-card">
+                                <a class="product-image" href="https://www.amazon.com/dp/B0D4YZY511">
+                                    <img src="~/assets/images/scrubber-04.jpg" alt="PUFTEM Handheld Electric Spin Scrubber">
+                                </a>
+                                <p class="sponsored">Sponsored <i class="fas fa-info-circle" aria-hidden="true"></i></p>
+                                <a class="product-title" href="https://www.amazon.com/dp/B0D4YZY511">PUFTEM Handheld Electric Spin Scrubber, Cordless Cleaning Brush with Battery Display and 6 Replaceable Heads</a>
+                                <div class="rating">
+                                    <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                    <a href="https://www.amazon.com/dp/B0D4YZY511">1,286</a>
+                                </div>
+                                <p class="bought">1K+ bought in past month</p>
+                                <p class="price" aria-label="34.99 dollars">
+                                    <span class="currency">$</span><span class="whole">34</span><span class="cents">99</span>
+                                </p>
+                                <p class="list-price">List: <del>$39.99</del></p>
+                                <p class="delivery-info">Delivery <strong>Tue, Nov 4</strong></p>
+                                <p class="ships">Ships to Vietnam</p>
+                                <button class="add-button" type="button">Add to cart</button>
+                            </article>
+
+                            <article class="product-card">
+                                <a class="product-image" href="https://www.amazon.com/dp/B0C1NJDTTX">
+                                    <img src="~/assets/images/scrubber-05.jpg" alt="TUYU Electric Spin Scrubber">
+                                </a>
+                                <p class="sponsored">Sponsored <i class="fas fa-info-circle" aria-hidden="true"></i></p>
+                                <a class="product-title" href="https://www.amazon.com/dp/B0C1NJDTTX">TUYU Electric Spin Scrubber, Full-Body IPX7 Waterproof Bathroom Scrubber with Power LCD Display, Adjustable Handle</a>
+                                <div class="rating">
+                                    <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                    <a href="https://www.amazon.com/dp/B0C1NJDTTX">8,023</a>
+                                </div>
+                                <p class="bought">1K+ bought in past month</p>
+                                <p class="price" aria-label="39.99 dollars">
+                                    <span class="currency">$</span><span class="whole">39</span><span class="cents">99</span>
+                                </p>
+                                <p class="list-price">List: <del>$49.99</del></p>
+                                <p class="delivery-info">Delivery <strong>Tue, Nov 4</strong></p>
+                                <p class="ships">Ships to Vietnam</p>
+                                <p class="sustainability"><i class="fas fa-leaf" aria-hidden="true"></i> More sustainable materials</p>
+
+                                <button class="add-button" type="button">Add to cart</button>
+                            </article>
+
+                        </div>
+                    </section>
+                </div>
+
+                <section class="recommendations" aria-labelledby="recommendation-heading-1">
+                    <div class="section-heading">
+                        <h2 id="recommendation-heading-1">Customers who viewed items in your browsing history also viewed</h2>
+                        <span>Page 1 of 5</span>
+                    </div>
+                    <div class="recommendation-list">
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Buckle+Strap+Tote+Bag">
+                                <img src="~/assets/images/bag-01.jpg" alt="Tote bag 1" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Buckle+Strap+Tote+Bag">Tommy Hilfiger Women&#x27;s Black Buckle Strap Tote Bag</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Buckle+Strap+Tote+Bag">82</a>
+                            </div>
+                            <p class="recommendation-price">$82<sup>00</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Buckle+Strap+Tote+Bag">
+                                <img src="~/assets/images/bag-02.jpg" alt="Tote bag 2" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Buckle+Strap+Tote+Bag">Tommy Hilfiger Women&#x27;s Beige Buckle Strap Tote Bag</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Buckle+Strap+Tote+Bag">229</a>
+                            </div>
+                            <span class="choice-label">Amazon's <b>Choice</b></span>
+                            <p class="recommendation-price">$79<sup>96</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Icon+Logo+Tape+Tote">
+                                <img src="~/assets/images/bag-03.jpg" alt="Tote bag 3" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Icon+Logo+Tape+Tote">Tommy Hilfiger Women&#x27;s Beige Icon Logo Tape Tote</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Icon+Logo+Tape+Tote">131</a>
+                            </div>
+                            <p class="recommendation-price">$74<sup>99</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Red+Icon+Coin+Purse+Tote">
+                                <img src="~/assets/images/bag-04.jpg" alt="Tote bag 4" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Red+Icon+Coin+Purse+Tote">Tommy Hilfiger Women&#x27;s Red Icon Coin Purse Tote</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Red+Icon+Coin+Purse+Tote">84</a>
+                            </div>
+                            <span class="choice-label">Amazon's <b>Choice</b></span>
+                            <p class="recommendation-price">$122<sup>00</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Icon+Logo+Tape+Tote">
+                                <img src="~/assets/images/bag-05.jpg" alt="Tote bag 5" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Icon+Logo+Tape+Tote">Tommy Hilfiger Women&#x27;s Black Icon Logo Tape Tote</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Icon+Logo+Tape+Tote">239</a>
+                            </div>
+                            <p class="recommendation-price">$61<sup>50</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Monogram+Hobo+Shoulder+Bag">
+                                <img src="~/assets/images/bag-06.jpg" alt="Tote bag 6" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Monogram+Hobo+Shoulder+Bag">Tommy Hilfiger Women&#x27;s Monogram Hobo Shoulder Bag</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Monogram+Hobo+Shoulder+Bag">179</a>
+                            </div>
+                            <p class="recommendation-price">$78<sup>99</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Monogram+Plaque+Tote+Bag">
+                                <img src="~/assets/images/bag-07.jpg" alt="Tote bag 7" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Monogram+Plaque+Tote+Bag">Tommy Hilfiger Women&#x27;s Monogram Plaque Tote Bag</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Monogram+Plaque+Tote+Bag">66</a>
+                            </div>
+                            <p class="recommendation-price">$66<sup>00</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Jacquard+Tote+Bag">
+                                <img src="~/assets/images/bag-08.jpg" alt="Tote bag 8" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Jacquard+Tote+Bag">Tommy Hilfiger Women&#x27;s Beige Jacquard Tote Bag</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Jacquard+Tote+Bag">113</a>
+                            </div>
+                            <p class="recommendation-price">$87<sup>99</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="recommendations" aria-labelledby="recommendation-heading-2">
+                    <div class="section-heading">
+                        <h2 id="recommendation-heading-2">Recommended based on your browsing history</h2>
+                        <span>Page 1 of 2</span>
+                    </div>
+                    <div class="recommendation-list">
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Braided+Leather+Tote+Bag">
+                                <img src="~/assets/images/bag-09.jpg" alt="Tote bag 9" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Braided+Leather+Tote+Bag">Tommy Hilfiger Women&#x27;s Braided Leather Tote Bag</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Braided+Leather+Tote+Bag">1,797</a>
+                            </div>
+                            <p class="recommendation-price">$55<sup>99</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Webbing+Crossbody+Tote">
+                                <img src="~/assets/images/bag-10.jpg" alt="Tote bag 10" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Webbing+Crossbody+Tote">Tommy Hilfiger Women&#x27;s Brown Webbing Crossbody Tote</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Webbing+Crossbody+Tote">304</a>
+                            </div>
+                            <p class="recommendation-price">$79<sup>99</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Blue+Monogram+Tote+Bag">
+                                <img src="~/assets/images/bag-11.jpg" alt="Tote bag 11" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Blue+Monogram+Tote+Bag">Tommy Hilfiger Women&#x27;s Blue Monogram Tote Bag</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Blue+Monogram+Tote+Bag">255</a>
+                            </div>
+                            <p class="recommendation-price">$148<sup>99</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Braided+Leather+Tote">
+                                <img src="~/assets/images/bag-12.jpg" alt="Tote bag 12" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Braided+Leather+Tote">Tommy Hilfiger Women&#x27;s Brown Braided Leather Tote</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Braided+Leather+Tote">171</a>
+                            </div>
+                            <p class="recommendation-price">$199<sup>99</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Textured+Tote+Bag">
+                                <img src="~/assets/images/bag-13.jpg" alt="Tote bag 13" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Textured+Tote+Bag">Tommy Hilfiger Women&#x27;s Black Textured Tote Bag</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Textured+Tote+Bag">114</a>
+                            </div>
+                            <p class="recommendation-price">$130<sup>00</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Suede+Tote+Bag">
+                                <img src="~/assets/images/bag-14.jpg" alt="Tote bag 14" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Suede+Tote+Bag">Tommy Hilfiger Women&#x27;s Brown Suede Tote Bag</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Suede+Tote+Bag">475</a>
+                            </div>
+                            <p class="recommendation-price">$32<sup>99</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Green+Webbing+Crossbody+Tote">
+                                <img src="~/assets/images/bag-15.jpg" alt="Tote bag 15" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Green+Webbing+Crossbody+Tote">Tommy Hilfiger Women&#x27;s Green Webbing Crossbody Tote</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Green+Webbing+Crossbody+Tote">226</a>
+                            </div>
+                            <p class="recommendation-price">$62<sup>00</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                        <article class="recommendation-card">
+                            <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Blue+Stripe+Tote+Bag">
+                                <img src="~/assets/images/bag-16.jpg" alt="Tote bag 16" loading="lazy">
+                            </a>
+                            <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Blue+Stripe+Tote+Bag">Tommy Hilfiger Women&#x27;s Blue Stripe Tote Bag</a>
+                            <div class="rating">
+                                <span class="stars" role="img" aria-label="4.5 out of 5 stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></span>
+                                <a href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Blue+Stripe+Tote+Bag">129</a>
+                            </div>
+                            <p class="recommendation-price">$34<sup>99</sup></p>
+                            <p>Get it <strong>Nov 11 - Dec 5</strong></p>
+                            <p>Ships to Vietnam</p>
+                        </article>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+
+        <aside class="cart-sidebar" id="cart" aria-label="Shopping cart preview">
+            <div class="cart-inner">
+                <div class="cart-summary">
+                    <p>Subtotal</p>
+                    <strong class="subtotal">$166.18</strong>
+                    <a class="go-cart" href="#cart">Go to Cart</a>
+                </div>
+
+                <article class="cart-item">
+                    <img src="~/assets/images/bag-02.jpg" alt="Beige tote bag in cart">
+                    <strong>$44.79</strong>
+                    <div class="quantity-control" aria-label="Bag quantity, 1">
+                        <button type="button" aria-label="Remove bag"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                        <span>1</span>
+                        <button type="button" aria-label="Increase bag quantity"><i class="fas fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                </article>
+
+                <article class="cart-item">
+                    <img src="~/assets/images/cart-shoe.webp" alt="Women's shoe in cart">
+                    <strong>$49.00</strong>
+                    <div class="quantity-control" aria-label="Shoes quantity, 2">
+                        <button type="button" aria-label="Decrease shoe quantity"><i class="fas fa-minus" aria-hidden="true"></i></button>
+                        <span>2</span>
+                        <button type="button" aria-label="Increase shoe quantity"><i class="fas fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                </article>
+
+                <article class="cart-item">
+                    <img src="~/assets/images/cart-dress.webp" alt="Dress in cart">
+                    <span class="deal-label">Limited time deal</span>
+                    <strong>$23.39</strong>
+                    <div class="quantity-control" aria-label="Dress quantity, 1">
+                        <button type="button" aria-label="Remove dress"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                        <span>1</span>
+                        <button type="button" aria-label="Increase dress quantity"><i class="fas fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                </article>
+            </div>
+        </aside>
+
+        <footer class="site-footer" id="footer">
+            <div class="footer-grid">
+                <a href="https://www.amazon.com/">Amazon Music<span>Stream millions<br>of songs</span></a>
+                <a href="https://www.amazon.com/">Amazon Ads<span>Reach customers<br>wherever they spend their time</span></a>
+                <a href="https://www.amazon.com/">6pm<span>Score deals<br>on fashion brands</span></a>
+                <a href="https://www.amazon.com/">AbeBooks<span>Books, art<br>&amp; collectibles</span></a>
+                <a href="https://www.amazon.com/">ACX<span>Audiobook Publishing<br>Made Easy</span></a>
+                <a href="https://www.amazon.com/">Sell on Amazon<span>Start a Selling<br>Account</span></a>
+                <a href="https://www.amazon.com/">Veeqo<span>Shipping Software<br>Inventory Management</span></a>
+                <a href="https://www.amazon.com/">Amazon Business<span>Everything For<br>Your Business</span></a>
+                <a href="https://www.amazon.com/">AmazonGlobal<span>Ship Orders<br>Internationally</span></a>
+                <a href="https://www.amazon.com/">Amazon Web Services<span>Scalable Cloud<br>Computing Services</span></a>
+                <a href="https://www.amazon.com/">Audible<span>Listen to Books &amp;<br>Original Audio Performances</span></a>
+                <a href="https://www.amazon.com/">Box Office Mojo<span>Find Movie<br>Box Office Data</span></a>
+                <a href="https://www.amazon.com/">Goodreads<span>Book reviews<br>&amp; recommendations</span></a>
+                <a href="https://www.amazon.com/">IMDb<span>Movies, TV<br>&amp; Celebrities</span></a>
+                <a href="https://www.amazon.com/">IMDbPro<span>Get Info<br>Entertainment Professionals Need</span></a>
+                <a href="https://www.amazon.com/">Kindle Direct Publishing<span>Indie Digital &amp;<br>Print Publishing Made Easy</span></a>
+                <a href="https://www.amazon.com/">Prime Video Direct<span>Video Distribution<br>Made Easy</span></a>
+                <a href="https://www.amazon.com/">Shopbop<span>Designer<br>Fashion Brands</span></a>
+                <a href="https://www.amazon.com/">Woot!<span>Deals and<br>Shenanigans</span></a>
+                <a href="https://www.amazon.com/">Zappos<span>Shoes &amp;<br>Clothing</span></a>
+                <a href="https://www.amazon.com/">Ring<span>Smart Home<br>Security Systems</span></a>
+                <a href="https://www.amazon.com/">eero WiFi<span>Stream 4K Video<br>in Every Room</span></a>
+                <a href="https://www.amazon.com/">Blink<span>Smart Security<br>for Every Home</span></a>
+                <a href="https://www.amazon.com/">Neighbors App<span>Real-Time Crime<br>&amp; Safety Alerts</span></a>
+                <a href="https://www.amazon.com/">Amazon Subscription Boxes<span>Top subscription boxes<br>– right to your door</span></a>
+                <a href="https://www.amazon.com/">PillPack<span>Pharmacy<br>Simplified</span></a>
+                <a href="https://www.amazon.com/">Amazon Luna<span>Video games from the cloud<br>No console required</span></a>
+            </div>
+            <div class="footer-bottom">
+                <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508088">Conditions of Use</a>
+                <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496">Privacy Notice</a>
+                <a href="https://www.amazon.com/privacyprefs">Consumer Health Data Privacy Disclosure</a>
+                <a href="https://www.amazon.com/privacyprefs">Your Ads Privacy Choices <i class="fas fa-check-square" aria-hidden="true"></i></a>
+                <p>&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+                <a class="back-to-top" href="#top"><i class="fas fa-chevron-up" aria-hidden="true"></i> Back to top</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
