@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+@{
+    // Trang đã có HTML đầy đủ, dùng bố cục Amazon riêng.
+    Layout = null;
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,9 +12,9 @@
     <title>Amazon Product List | Nguyễn Ngọc Lợi - KtraFE</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="~/assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="~/Content/Style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="@Url.Content("~/assets/fontawesome/css/all.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/Style.css")">
+    <script src="@Url.Content("~/Scripts/scripts.js")" defer></script>
 </head>
 <body id="top">
     <a class="skip-link" href="#results">Skip to products</a>
@@ -18,7 +23,7 @@
         <div class="site-main">
             <header>
                 <div class="header-main">
-                    <a class="header-link" href="index.html" aria-label="Amazon home">
+                    <a class="header-link" href="@Url.Action("Index", "Home")" aria-label="Amazon home">
                         <span class="amazon-logo">amazon</span>
                     </a>
 
@@ -152,7 +157,7 @@
                         <div class="product-grid">
                             <article class="product-card" data-product-id="scrubber-01">
                                 <a class="product-image" href="https://www.amazon.com/dp/B0B7RSV894">
-                                    <img src="~/assets/images/scrubber-01.jpg" alt="Bomves Electric Spin Scrubber">
+                                    <img src="@Url.Content("~/assets/images/scrubber-01.jpg")" alt="Bomves Electric Spin Scrubber">
                                 </a>
                                 <p class="sponsored">Sponsored <i class="fas fa-info-circle" aria-hidden="true"></i></p>
                                 <a class="product-title" href="https://www.amazon.com/dp/B0B7RSV894">Bomves Electric Spin Scrubber, Cordless Cleaning Brush for Home, 8 Replaceable Brush Heads, Adjustable Long Handle</a>
@@ -173,7 +178,7 @@
 
                             <article class="product-card" data-product-id="scrubber-02">
                                 <a class="product-image" href="https://www.amazon.com/s?k=Casabella+Power+Spin+Scrubber">
-                                    <img src="~/assets/images/scrubber-02.jpg" alt="Casabella Power Spin Scrubber">
+                                    <img src="@Url.Content("~/assets/images/scrubber-02.jpg")" alt="Casabella Power Spin Scrubber">
                                 </a>
                                 <p class="sponsored">Sponsored <i class="fas fa-info-circle" aria-hidden="true"></i></p>
                                 <a class="product-title" href="https://www.amazon.com/s?k=Casabella+Power+Spin+Scrubber">Casabella Power Spin Scrubber, Extendable to 47.5 inches, Cordless Electric Cleaner for Shower, Kitchen and Bathroom</a>
@@ -194,7 +199,7 @@
 
                             <article class="product-card" data-product-id="scrubber-03">
                                 <a class="product-image" href="https://www.amazon.com/dp/B09P51V2LH">
-                                    <img src="~/assets/images/scrubber-03.jpg" alt="Leebein Electric Spin Scrubber">
+                                    <img src="@Url.Content("~/assets/images/scrubber-03.jpg")" alt="Leebein Electric Spin Scrubber">
                                 </a>
                                 <p class="sponsored">Sponsored <i class="fas fa-info-circle" aria-hidden="true"></i></p>
                                 <a class="product-title" href="https://www.amazon.com/dp/B09P51V2LH">Leebein Electric Spin Scrubber, Cordless Cleaning Brush with 8 Brush Heads, Adjustable Handle for Bathroom and Tile</a>
@@ -216,7 +221,7 @@
 
                             <article class="product-card" data-product-id="scrubber-04">
                                 <a class="product-image" href="https://www.amazon.com/dp/B0D4YZY511">
-                                    <img src="~/assets/images/scrubber-04.jpg" alt="PUFTEM Handheld Electric Spin Scrubber">
+                                    <img src="@Url.Content("~/assets/images/scrubber-04.jpg")" alt="PUFTEM Handheld Electric Spin Scrubber">
                                 </a>
                                 <p class="sponsored">Sponsored <i class="fas fa-info-circle" aria-hidden="true"></i></p>
                                 <a class="product-title" href="https://www.amazon.com/dp/B0D4YZY511">PUFTEM Handheld Electric Spin Scrubber, Cordless Cleaning Brush with Battery Display and 6 Replaceable Heads</a>
@@ -236,7 +241,7 @@
 
                             <article class="product-card" data-product-id="scrubber-05">
                                 <a class="product-image" href="https://www.amazon.com/dp/B0C1NJDTTX">
-                                    <img src="~/assets/images/scrubber-05.jpg" alt="TUYU Electric Spin Scrubber">
+                                    <img src="@Url.Content("~/assets/images/scrubber-05.jpg")" alt="TUYU Electric Spin Scrubber">
                                 </a>
                                 <p class="sponsored">Sponsored <i class="fas fa-info-circle" aria-hidden="true"></i></p>
                                 <a class="product-title" href="https://www.amazon.com/dp/B0C1NJDTTX">TUYU Electric Spin Scrubber, Full-Body IPX7 Waterproof Bathroom Scrubber with Power LCD Display, Adjustable Handle</a>
@@ -267,7 +272,7 @@
                     <div class="recommendation-list">
                         <article class="recommendation-card" data-product-id="bag-01">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Buckle+Strap+Tote+Bag">
-                                <img src="~/assets/images/bag-01.jpg" alt="Tote bag 1" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-01.jpg")" alt="Tote bag 1" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Buckle+Strap+Tote+Bag">Tommy Hilfiger Women&#x27;s Black Buckle Strap Tote Bag</a>
                             <div class="rating">
@@ -280,7 +285,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-02">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Buckle+Strap+Tote+Bag">
-                                <img src="~/assets/images/bag-02.jpg" alt="Tote bag 2" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-02.jpg")" alt="Tote bag 2" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Buckle+Strap+Tote+Bag">Tommy Hilfiger Women&#x27;s Beige Buckle Strap Tote Bag</a>
                             <div class="rating">
@@ -294,7 +299,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-03">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Icon+Logo+Tape+Tote">
-                                <img src="~/assets/images/bag-03.jpg" alt="Tote bag 3" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-03.jpg")" alt="Tote bag 3" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Icon+Logo+Tape+Tote">Tommy Hilfiger Women&#x27;s Beige Icon Logo Tape Tote</a>
                             <div class="rating">
@@ -307,7 +312,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-04">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Red+Icon+Coin+Purse+Tote">
-                                <img src="~/assets/images/bag-04.jpg" alt="Tote bag 4" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-04.jpg")" alt="Tote bag 4" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Red+Icon+Coin+Purse+Tote">Tommy Hilfiger Women&#x27;s Red Icon Coin Purse Tote</a>
                             <div class="rating">
@@ -321,7 +326,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-05">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Icon+Logo+Tape+Tote">
-                                <img src="~/assets/images/bag-05.jpg" alt="Tote bag 5" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-05.jpg")" alt="Tote bag 5" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Icon+Logo+Tape+Tote">Tommy Hilfiger Women&#x27;s Black Icon Logo Tape Tote</a>
                             <div class="rating">
@@ -334,7 +339,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-06">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Monogram+Hobo+Shoulder+Bag">
-                                <img src="~/assets/images/bag-06.jpg" alt="Tote bag 6" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-06.jpg")" alt="Tote bag 6" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Monogram+Hobo+Shoulder+Bag">Tommy Hilfiger Women&#x27;s Monogram Hobo Shoulder Bag</a>
                             <div class="rating">
@@ -347,7 +352,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-07">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Monogram+Plaque+Tote+Bag">
-                                <img src="~/assets/images/bag-07.jpg" alt="Tote bag 7" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-07.jpg")" alt="Tote bag 7" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Monogram+Plaque+Tote+Bag">Tommy Hilfiger Women&#x27;s Monogram Plaque Tote Bag</a>
                             <div class="rating">
@@ -360,7 +365,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-08">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Jacquard+Tote+Bag">
-                                <img src="~/assets/images/bag-08.jpg" alt="Tote bag 8" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-08.jpg")" alt="Tote bag 8" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Beige+Jacquard+Tote+Bag">Tommy Hilfiger Women&#x27;s Beige Jacquard Tote Bag</a>
                             <div class="rating">
@@ -383,7 +388,7 @@
                     <div class="recommendation-list">
                         <article class="recommendation-card" data-product-id="bag-09">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Braided+Leather+Tote+Bag">
-                                <img src="~/assets/images/bag-09.jpg" alt="Tote bag 9" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-09.jpg")" alt="Tote bag 9" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Braided+Leather+Tote+Bag">Tommy Hilfiger Women&#x27;s Braided Leather Tote Bag</a>
                             <div class="rating">
@@ -396,7 +401,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-10">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Webbing+Crossbody+Tote">
-                                <img src="~/assets/images/bag-10.jpg" alt="Tote bag 10" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-10.jpg")" alt="Tote bag 10" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Webbing+Crossbody+Tote">Tommy Hilfiger Women&#x27;s Brown Webbing Crossbody Tote</a>
                             <div class="rating">
@@ -409,7 +414,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-11">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Blue+Monogram+Tote+Bag">
-                                <img src="~/assets/images/bag-11.jpg" alt="Tote bag 11" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-11.jpg")" alt="Tote bag 11" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Blue+Monogram+Tote+Bag">Tommy Hilfiger Women&#x27;s Blue Monogram Tote Bag</a>
                             <div class="rating">
@@ -422,7 +427,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-12">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Braided+Leather+Tote">
-                                <img src="~/assets/images/bag-12.jpg" alt="Tote bag 12" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-12.jpg")" alt="Tote bag 12" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Braided+Leather+Tote">Tommy Hilfiger Women&#x27;s Brown Braided Leather Tote</a>
                             <div class="rating">
@@ -435,7 +440,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-13">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Textured+Tote+Bag">
-                                <img src="~/assets/images/bag-13.jpg" alt="Tote bag 13" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-13.jpg")" alt="Tote bag 13" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Black+Textured+Tote+Bag">Tommy Hilfiger Women&#x27;s Black Textured Tote Bag</a>
                             <div class="rating">
@@ -448,7 +453,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-14">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Suede+Tote+Bag">
-                                <img src="~/assets/images/bag-14.jpg" alt="Tote bag 14" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-14.jpg")" alt="Tote bag 14" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Brown+Suede+Tote+Bag">Tommy Hilfiger Women&#x27;s Brown Suede Tote Bag</a>
                             <div class="rating">
@@ -461,7 +466,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-15">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Green+Webbing+Crossbody+Tote">
-                                <img src="~/assets/images/bag-15.jpg" alt="Tote bag 15" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-15.jpg")" alt="Tote bag 15" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Green+Webbing+Crossbody+Tote">Tommy Hilfiger Women&#x27;s Green Webbing Crossbody Tote</a>
                             <div class="rating">
@@ -474,7 +479,7 @@
                         </article>
                         <article class="recommendation-card" data-product-id="bag-16">
                             <a class="recommendation-image" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Blue+Stripe+Tote+Bag">
-                                <img src="~/assets/images/bag-16.jpg" alt="Tote bag 16" loading="lazy">
+                                <img src="@Url.Content("~/assets/images/bag-16.jpg")" alt="Tote bag 16" loading="lazy">
                             </a>
                             <a class="recommendation-title" href="https://www.amazon.com/s?k=Tommy+Hilfiger+Womens+Blue+Stripe+Tote+Bag">Tommy Hilfiger Women&#x27;s Blue Stripe Tote Bag</a>
                             <div class="rating">
@@ -502,7 +507,7 @@
 
                 <div id="cart-items" class="cart-items">
                     <article class="cart-item" data-product-id="sample-tote" data-quantity="1" data-name="Beige Tote Bag">
-                        <img src="~/assets/images/bag-02.jpg" alt="Beige tote bag in cart">
+                        <img src="@Url.Content("~/assets/images/bag-02.jpg")" alt="Beige tote bag in cart">
                         <strong>$44.79</strong>
                         <div class="quantity-control" aria-label="Bag quantity, 1">
                             <button type="button" aria-label="Remove bag"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
@@ -512,7 +517,7 @@
                     </article>
 
                     <article class="cart-item" data-product-id="sample-shoes" data-quantity="2" data-name="Women's Shoes">
-                        <img src="~/assets/images/cart-shoe.webp" alt="Women's shoe in cart">
+                        <img src="@Url.Content("~/assets/images/cart-shoe.webp")" alt="Women's shoe in cart">
                         <strong>$49.00</strong>
                         <div class="quantity-control" aria-label="Shoes quantity, 2">
                             <button type="button" aria-label="Decrease shoe quantity"><i class="fas fa-minus" aria-hidden="true"></i></button>
@@ -522,7 +527,7 @@
                     </article>
 
                     <article class="cart-item" data-product-id="sample-dress" data-quantity="1" data-name="Floral Dress">
-                        <img src="~/assets/images/cart-dress.webp" alt="Dress in cart">
+                        <img src="@Url.Content("~/assets/images/cart-dress.webp")" alt="Dress in cart">
                         <span class="deal-label">Limited time deal</span>
                         <strong>$23.39</strong>
                         <div class="quantity-control" aria-label="Dress quantity, 1">

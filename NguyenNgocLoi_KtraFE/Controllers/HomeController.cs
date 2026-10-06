@@ -8,6 +8,11 @@ namespace NguyenNgocLoi_KtraFE.Controllers
 {
     public class HomeController : Controller
     {
+        // Route mặc định / và /Home/Index mở trang Amazon.
+        public ActionResult Index()
+        {
+            return View("NguyenNgocLoi_KtraFE");
+        }
 
         public ActionResult About()
         {
